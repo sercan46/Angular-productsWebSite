@@ -1,0 +1,14 @@
+{
+	"Login":{
+		"UserName":"Smartera",
+		"Password":"smart123"
+	},
+	"Products":[
+		{"ProdId":1,"ProdName":"Samsung A5","ProdCount":186,"ProdSales":55,"ProdDesc":"4Gb Ram, 16 Gb Hafıza","ProdImage":"https://picsum.photos/200/300"},
+		{"ProdId":2,"ProdName":"Iphone 6S", "ProdCount":250,"ProdSales":45,"ProdDesc":"16Gb Ram, 128 Gb Hafıza","ProdImage":"https://picsum.photos/200/300"},
+		{"ProdId":3,"ProdName":"Nokia 3310","ProdCount":155,"ProdSales":30,"ProdDesc":"1Gb Ram, 2 Gb Hafıza","ProdImage":"https://picsum.photos/200/300"},
+		{"ProdId":4,"ProdName":"Oppo A3S","ProdCount":255,"ProdSales":100,"ProdDesc":"8Gb Ram, 36 Gb Hafıza","ProdImage":"https://picsum.photos/200/300"},
+		{"ProdId":5,"ProdName":"Huawei Y7","ProdCount":756,"ProdSales":265,"ProdDesc":"4Gb Ram, 16 Gb Hafıza","ProdImage":"https://picsum.photos/200/300"},
+		{"ProdId":6,"ProdName":"Xiaomi Redmi Note 9","ProdCount":788,"ProdSales":555,"ProdDesc":"2Gb Ram, 16 Gb Hafıza","ProdImage":"https://picsum.photos/200/300"}
+        ]
+}

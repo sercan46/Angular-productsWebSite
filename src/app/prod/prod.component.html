@@ -1,0 +1,130 @@
+<p-table [value]="prods" [columns]="cols" [resizableColumns]="true">
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th pResizableColumn style="width: 3rem"></th>
+      <th pResizableColumn *ngFor="let col of cols">
+        {{ col.header }}
+      </th>
+      <th pResizableColumn></th>
+      <th pResizableColumn></th>
+    </tr>
+  </ng-template>
+  <ng-template
+    pTemplate="body"
+    let-rowData
+    let-columns="columns"
+    let-index="rowIndex"
+  >
+    <tr [pReorderableRow]="index">
+      <td>
+        <span class="pi pi-bars" pReorderableRowHandle></span>
+      </td>
+      <td *ngFor="let col of columns">
+        {{ rowData[col.field] }}
+      </td>
+      <td>
+        <button
+          pButton
+          type="button"
+          label="Düzenle"
+          icon="pi pi-pencil"
+          (click)="duzenle(rowData)"
+        ></button>
+      </td>
+      <td>
+        <button
+          pButton
+          type="button"
+          label="Sil"
+          class="p-button-danger"
+          icon="pi pi-trash"
+          (click)="deleteSelectedProducts(rowData)"
+        ></button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+<p-confirmDialog
+  header="Confirmation"
+  icon="pi pi-exclamation-triangle"
+></p-confirmDialog>
+
+<p-dialog header="New Prod" [(visible)]="displayNew">
+  <div class="container">
+    <span class="p-float-label">
+      <input type="text" [formControl]="prodidController" pInputText />
+      <label for="float-input">Prod Id</label>
+    </span>
+  </div>
+
+  <div class="container">
+    <span class="p-float-label">
+      <input type="text" [formControl]="pnameController" pInputText />
+      <label for="float-input">Prod Name</label>
+    </span>
+  </div>
+
+  <div class="container">
+    <span class="p-float-label">
+      <input type="text" [formControl]="pcountController" pInputText />
+      <label for="float-input">Prod Count</label>
+    </span>
+  </div>
+
+  <div class="container">
+    <span class="p-float-label">
+      <input type="text" [formControl]="pSalesController" pInputText />
+      <label for="float-input">Prod Sales</label>
+    </span>
+  </div>
+
+  <button
+    pButton
+    type="button"
+    (click)="addProd()"
+    icon="pi pi-plus"
+    label="Add"
+  ></button>
+</p-dialog>
+
+<p-dialog header="Update Prod" [(visible)]="displayUpdate">
+  <div class="container">
+    <span class="p-float-label">
+      <input type="text" disabled="true" [formControl]="prodidController" pInputText />
+    </span>
+  </div>
+
+  <div class="container">
+    <span class="p-float-label">
+      <input type="text" [formControl]="pnameController" pInputText />
+    </span>
+  </div>
+
+  <div class="container">
+    <span class="p-float-label">
+      <input type="text" [formControl]="pcountController" pInputText />
+    </span>
+  </div>
+
+  <div class="container">
+    <span class="p-float-label">
+      <input type="text" [formControl]="pSalesController" pInputText />
+    </span>
+  </div>
+
+  <button
+    pButton
+    type="button"
+    (click)="updateProd()"
+    icon="pi pi-pencil"
+    label="Düzenle"
+  ></button>
+</p-dialog>
+<button
+  pButton
+  class="p-button-success addButon"
+  type="button"
+  (click)="addDialog()"
+  icon="pi pi-plus"
+  label="Add"
+></button>

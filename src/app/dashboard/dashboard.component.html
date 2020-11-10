@@ -1,0 +1,11 @@
+<div>
+  <p class="pText">Prod Count</p>
+  <p-chart type="pie" [data]="dataPie"></p-chart>
+</div>
+
+<div>
+  <p class="pText">Prod Sales</p>
+  <p-chart type="bar" [data]="dataBar"></p-chart>
+</div>
+<button class="buttonStyle" pButton type="button" label="Products" (click)="prodList()"></button>
+<button class="buttonStyle" pButton type="button" label="Products List" (click)="prodGridList()"></button>

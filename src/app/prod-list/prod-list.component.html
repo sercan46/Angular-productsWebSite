@@ -1,0 +1,29 @@
+<div class="column">
+<p-dataView [value]="prods">
+  <ng-template let-prod pTemplate="listItem">
+    <div class="listDiv">
+      <p>Product No: {{ prod.ProdId }}</p>
+      <p>Product Name: {{ prod.ProdName }}</p>
+      <p>
+       Product Description:  {{ prod.ProdDesc }}
+      </p>
+      <button pButton type="button" label="Detay Aç"  (click)="openDetail(prod)"></button>
+      <button  style="margin-left: 5vh;" pButton type="button" label="Sepete At" class="p-button-warning" (click)="basketAdd(prod)"></button>
+
+    </div>
+  </ng-template>
+</p-dataView>
+</div>
+<p class="pStyle"> Basket Items</p>
+<div class="column">
+  <div class="column1" *ngFor="let prod of basketProd">
+    <p>{{prod.ProdId}}</p>
+    <p>{{prod.ProdName}}</p>
+    <p>{{prod.ProdDesc}}</p>
+  </div>
+
+</div>
+<p-confirmDialog
+  header="Confirmation"
+  icon="pi pi-exclamation-triangle"
+></p-confirmDialog>

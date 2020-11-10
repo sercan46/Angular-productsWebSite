@@ -1,0 +1,11 @@
+.pText{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: crimson;
+}
+.buttonStyle{
+  margin-left: 28%;
+  margin-top: 10vh;
+  width: 100vh;
+}
