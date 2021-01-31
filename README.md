@@ -1,6 +1,10 @@
-# Smartera
+# Product Web Site
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.24.
+
+## Projenin Amacı
+
+Angular kullanarak  geliştirdiğim ürünler web site projesidir.
 
 ## Development server
 
